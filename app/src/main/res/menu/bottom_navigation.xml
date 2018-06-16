@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_Home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/navigation_Analysis"
+        android:icon="@drawable/analysis2"
+        android:title="Analysis" />
+
+    <item
+        android:id="@+id/navigation_Test"
+        android:icon="@drawable/test"
+        android:title="Test" />
+
+    <item
+        android:id="@+id/navigation_Doubts"
+        android:icon="@drawable/ic_assignment_black_24dp"
+        android:title="Doubts" />
+
+    <item
+        android:id="@+id/navigation_Profile"
+        android:icon="@drawable/ic_person_black_24dp"
+        android:title="Profile" />
+
+</menu>

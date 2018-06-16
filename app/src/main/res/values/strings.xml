@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Final</string>
+    <string name="privacy">Privacy Policy</string>
+    <string name="terms">Terms of Use</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_tests">Tests</string>
+    <string name="nav_analysis">Analysis</string>
+    <string name="nav_doubts">Doubts</string>
+    <string name="nav_profile">Profile</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Join_plus">Join Plus</string>
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Close Navigation Drawer</string>
+
+
+</resources>

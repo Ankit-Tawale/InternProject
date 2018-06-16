@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+    <item
+        android:id="@+id/notification"
+        android:icon="@drawable/ic_notifications_active"
+        android:title="Notification"
+        android:orderInCategory="100"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/wallet"
+        android:icon="@drawable/ic_wallet"
+        android:title="Notification"
+        android:orderInCategory="100"
+        app:showAsAction="always"/>
+    </group>
+
+
+
+
+</menu>

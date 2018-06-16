@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+    <item
+        android:id="@+id/change_Language"
+        android:title="Change Language">
+        
+    </item>
+    <item
+        android:id="@+id/join_plus"
+        android:title="@string/Join_plus" />
+    </group>
+    <item android:title="My Section">
+        <menu>
+            <item
+                android:id="@+id/my_purchase"
+                android:title="My Purchase" />
+            <item
+                android:id="@+id/all_india_tests"
+                android:title="All India Tests" />
+            <item
+                android:id="@+id/my_bookmarks"
+                android:title="My Bookmarks" />
+            <item
+                android:id="@+id/recently_viewed"
+                android:title="Recently Viewed" />
+        </menu>
+    </item>
+    <item android:title="Others">
+        <menu>
+            <item
+                android:id="@+id/night_mode"
+                android:title="Night Mode" />
+            <item
+                android:id="@+id/settings"
+                android:title="Settings" />
+            <item
+                android:id="@+id/share_app"
+                android:title="Share App" />
+            <item
+                android:id="@+id/help"
+                android:title="Help" />
+            <item
+                android:id="@+id/about"
+                android:title="About" />
+        </menu>
+    </item>
+</menu>

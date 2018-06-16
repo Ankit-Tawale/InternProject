@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="spinner_list_item_array">
+        <item>Select Exam</item>
+        <item>JEE Main</item>
+        <item>JEE Advanced</item>
+        <item>NEET</item>
+    </string-array>
+</resources>

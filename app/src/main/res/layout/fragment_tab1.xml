@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    tools:context=".Tab1">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorgrey"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/id1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/ll1"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:layout_alignParentTop="true"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:background="@color/white"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="52dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            app:srcCompat="@drawable/ic_job" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="30dp"
+                            android:gravity="center"
+                            android:text="Jobs"
+                            android:textColor="#000000" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="120dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="@color/white">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="52dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            app:srcCompat="@drawable/ic_computer_blog" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginBottom="30dp"
+                            android:gravity="center"
+                            android:text="Blog"
+                            android:textColor="#000000"
+                            tools:ignore="UnknownId" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="120dp"
+                        android:layout_marginLeft="1dp"
+
+                        android:background="@color/white">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="52dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/currentaffairs" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginBottom="30dp"
+                            android:gravity="center"
+                            android:text="Current affairs"
+                            android:textColor="#000000" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll2"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/ll1"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginTop="1dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="120dp"
+                        android:background="@color/white">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="52dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            app:srcCompat="@drawable/ic_communication" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginBottom="30dp"
+                            android:gravity="center"
+                            android:text="Communication"
+                            android:textColor="#000000"
+                            tools:ignore="UnknownId" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="120dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="@color/white">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="52dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/eaxmtips" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginBottom="30dp"
+                            android:gravity="center"
+                            android:text="Exam Tips"
+                            android:textColor="#000000" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="120dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="@color/white">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="52dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/examalert" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginBottom="30dp"
+                            android:gravity="center"
+                            android:text="Exam alert"
+                            android:textColor="#000000"
+                            tools:ignore="UnknownId" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/btn2"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:layout_below="@+id/ll2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="-20dp"
+                    android:background="@drawable/button1"
+                    android:src="@drawable/arrowdown" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+
+                android:id="@+id/id2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/ll3"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="120dp"
+                        android:background="@color/white">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="52dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/onelinear" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginBottom="30dp"
+                            android:gravity="center"
+                            android:text="One linear"
+                            android:textColor="#000000" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="120dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="@color/white">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="52dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            app:srcCompat="@drawable/ic_news" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginBottom="30dp"
+                            android:gravity="center"
+                            android:text="News"
+                            android:textColor="#000000" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="120dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="@color/white">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="52dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            app:srcCompat="@drawable/ic_videocam_black_24dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginBottom="30dp"
+                            android:gravity="center"
+                            android:text="Videos"
+                            android:textColor="#000000" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll4"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/ll3"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="1dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="120dp"
+                        android:background="@color/white">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="52dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            app:srcCompat="@drawable/ic_study" />
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginBottom="30dp"
+                            android:gravity="center"
+                            android:text="Study Material"
+                            android:textColor="#000000" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="120dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="@color/white">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="52dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/studytips" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginBottom="30dp"
+                            android:gravity="center"
+                            android:text="Study Tips"
+                            android:textColor="#000000" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="120dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="@color/white">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="52dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            app:srcCompat="@drawable/ic_insertemoiton" />
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginBottom="30dp"
+                            android:gravity="center"
+                            android:text="Vocab Express"
+                            android:textColor="#000000" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/btn1"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:layout_below="@+id/ll4"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="-20dp"
+                    android:background="@drawable/button1"
+                    android:src="@drawable/arrowup" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
