@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.asus.afinal">
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-feature android:name="android.hardware.location.gps" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -29,7 +33,7 @@
             android:name=".NavigationActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Jobs"
+            android:name=".Physics"
             android:label="@string/title_activity_jobs"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
@@ -47,9 +51,10 @@
         <activity
             android:name=".Change1Activity"
             android:theme="@style/AppTheme.Popme" />
-        <activity android:name=".Change2Activity"
-            android:theme="@style/AppTheme.Popme"
-            ></activity>
+        <activity
+            android:name=".Change2Activity"
+            android:theme="@style/AppTheme.Popme" />
+        <activity android:name=".Change3Activity"></activity>
     </application>
 
 </manifest>
