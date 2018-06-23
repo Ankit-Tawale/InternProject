@@ -1,16 +1,591 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Tab2">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tab2"
-        android:textSize="30dp"
-        android:layout_centerInParent="true"/>
 
-</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/c1"
+            android:layout_margin="16dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Lets Begin !"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Start attempting question and track \n your daily progress here"
+                    android:textSize="12sp" />
+
+                <SeekBar
+                    android:id="@+id/seekBar2"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:progressDrawable="@drawable/custom_seekbar_progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="3"
+                    android:progress="0" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@android:color/black"
+                        android:gravity="center"
+                        android:text="Beginner"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textColor="@android:color/black"
+                        android:gravity="center"
+                        android:text="Intermediate"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="@android:color/black"
+                        android:text="Advanced"/>
+
+                </LinearLayout>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Start Now"
+                    android:textAllCaps="false"
+                    android:layout_margin="16dp"
+                    android:textColor="@android:color/white"
+                    android:background="@color/blue"/>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:id="@+id/c2"
+            android:layout_below="@+id/c1">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:id="@+id/l1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/orange" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Exam Topic"
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/c21"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/l1">
+
+
+                    <RelativeLayout
+                        android:id="@+id/c21r1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp">
+
+                        <LinearLayout
+                            android:id="@+id/c21l1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="54dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="History"
+                                android:textColor="@android:color/black" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0/5760 Attempted" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/c21l1"
+                            android:layout_alignEnd="@+id/hr"
+                            android:layout_marginEnd="20dp"
+                            android:drawableLeft="@drawable/ic_play_arrow"
+                            android:gravity="center_horizontal"
+                            android:text="Attempt"
+                            android:textColor="@color/blue" />
+
+                        <SeekBar
+                            android:id="@+id/seekBar3"
+                            style="@style/Widget.AppCompat.SeekBar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/c21l1"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="15dp"
+                            android:progressDrawable="@drawable/custom_seekbar_progress" />
+
+                        <TableRow
+                            android:id="@+id/hr"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/seekBar3"
+                            android:layout_margin="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="#000000"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp">
+
+                        </TableRow>
+
+                        <ImageView
+                            android:id="@+id/imageView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="42dp"
+                            android:src="@color/blue" />
+
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/c22"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/l1">
+
+
+                    <RelativeLayout
+                        android:id="@+id/c22r1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp">
+
+                        <LinearLayout
+                            android:id="@+id/c22l1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="54dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Geography"
+                                android:textColor="@android:color/black" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0/2422 Attempted" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/c22l1"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="30dp"
+                            android:drawableLeft="@drawable/ic_play_arrow"
+                            android:gravity="center_horizontal"
+                            android:text="Attempt"
+
+                            android:textColor="@color/blue" />
+
+                        <SeekBar
+                            android:id="@+id/seekBar4"
+                            style="@style/Widget.AppCompat.SeekBar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/c22l1"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="15dp"
+                            android:progressDrawable="@drawable/custom_seekbar_progress" />
+
+                        <TableRow
+                            android:id="@+id/hr1"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/seekBar4"
+                            android:layout_margin="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="#000000"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp">
+
+                        </TableRow>
+
+                        <ImageView
+                            android:id="@+id/imageView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="42dp"
+                            android:src="@color/blue" />
+
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/c23"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/l1">
+
+
+                    <RelativeLayout
+                        android:id="@+id/c23r1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp">
+
+                        <LinearLayout
+                            android:id="@+id/c23l1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="54dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Reasoning"
+                                android:textColor="@android:color/black" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0/381 Attempted" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/c23l1"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="30dp"
+                            android:drawableLeft="@drawable/ic_play_arrow"
+                            android:gravity="center_horizontal"
+                            android:text="Attempt"
+                            android:textColor="@color/blue" />
+
+                        <SeekBar
+                            android:id="@+id/seekBar5"
+                            style="@style/Widget.AppCompat.SeekBar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/c23l1"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="15dp"
+                            android:progressDrawable="@drawable/custom_seekbar_progress" />
+
+                        <TableRow
+                            android:id="@+id/hr2"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/seekBar5"
+                            android:layout_margin="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="#000000"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp">
+
+                        </TableRow>
+
+                        <ImageView
+                            android:id="@+id/imageView5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="42dp"
+                            android:src="@color/blue" />
+
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/c24"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/l1">
+
+
+                    <RelativeLayout
+                        android:id="@+id/c24r1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp">
+
+                        <LinearLayout
+                            android:id="@+id/c24l1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="54dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="English"
+                                android:textColor="@android:color/black" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0/4717 Attempted" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/c24l1"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="30dp"
+                            android:drawableLeft="@drawable/ic_play_arrow"
+                            android:gravity="center_horizontal"
+                            android:text="Attempt"
+                            android:textColor="@color/blue" />
+
+                        <SeekBar
+                            android:id="@+id/seekBar6"
+                            style="@style/Widget.AppCompat.SeekBar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/c24l1"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="15dp"
+                            android:progressDrawable="@drawable/custom_seekbar_progress" />
+
+                        <TableRow
+                            android:id="@+id/hr3"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/seekBar6"
+                            android:layout_margin="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="#000000"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp">
+
+                        </TableRow>
+
+                        <ImageView
+                            android:id="@+id/imageView6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="42dp"
+                            android:src="@color/blue" />
+
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/c25"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/l1">
+
+
+                    <RelativeLayout
+                        android:id="@+id/c25r1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp">
+
+                        <LinearLayout
+                            android:id="@+id/c25l1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="54dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Numerical Ability"
+                                android:textColor="@android:color/black" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0/5652 Attempted" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/c25l1"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="30dp"
+                            android:drawableLeft="@drawable/ic_play_arrow"
+                            android:gravity="center_horizontal"
+                            android:text="Attempt"
+                            android:textColor="@color/blue" />
+
+                        <SeekBar
+                            android:id="@+id/seekBar7"
+                            style="@style/Widget.AppCompat.SeekBar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/c25l1"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="15dp"
+                            android:progressDrawable="@drawable/custom_seekbar_progress" />
+
+                        <TableRow
+                            android:id="@+id/hr4"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/seekBar7"
+                            android:layout_margin="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="#000000"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp">
+
+                        </TableRow>
+
+                        <ImageView
+                            android:id="@+id/imageView7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="42dp"
+                            android:src="@color/blue" />
+
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/c2"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="10dp"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/darkblue">
+
+                <ImageView
+                    android:layout_width="7dp"
+                    android:layout_height="11dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/orange"
+                    />
+
+                <TextView
+                    android:id="@+id/text3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Want to Compete \n with your \n Friends?"
+                    android:textAlignment="textStart"
+                    android:textColor="@android:color/white"
+                    android:textSize="16dp" />
+
+                <Button
+                    android:layout_width="174dp"
+                    android:layout_height="40dp"
+                    android:paddingLeft="10dp"
+                    android:layout_below="@+id/text3"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rounded_button_new"
+                    android:drawableStart="@drawable/ic_person_add"
+                    android:text="Invite friend"
+                    android:layout_marginBottom="10dp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/blue" />
+
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+
+    </RelativeLayout>
+
+</ScrollView>

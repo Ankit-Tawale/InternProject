@@ -25,10 +25,31 @@
         <activity
             android:name=".Login"
             android:parentActivityName=".SignUpActivity" />
-        <activity android:name=".NavigationActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
+        <activity
+            android:name=".NavigationActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Jobs"
+            android:label="@string/title_activity_jobs"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".CurrentAffairs"
+            android:label="@string/title_activity_current_affairs"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ProfileActivity"
+            android:label="Profile"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Bookmark"
+            android:label="My Bookmark"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Change1Activity"
+            android:theme="@style/AppTheme.Popme" />
+        <activity android:name=".Change2Activity"
+            android:theme="@style/AppTheme.Popme"
+            ></activity>
     </application>
 
 </manifest>

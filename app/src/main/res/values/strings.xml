@@ -13,6 +13,8 @@
     <string name="Join_plus">Join Plus</string>
     <string name="navigation_drawer_open">Open Navigation Drawer</string>
     <string name="navigation_drawer_close">Close Navigation Drawer</string>
+    <string name="title_activity_jobs">Jobs</string>
+    <string name="title_activity_current_affairs">CurrentAffairs</string>
 
 
 </resources>

@@ -7,6 +7,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.SeekBar;
+import android.widget.Toast;
 
 
 /**
@@ -26,6 +28,7 @@ public class Tab2 extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    View root;
 
     private OnFragmentInteractionListener mListener;
 
@@ -64,7 +67,28 @@ public class Tab2 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tab2, container, false);
+        root = inflater.inflate(R.layout.fragment_tab2, container, false);
+
+        SeekBar seekBar = (SeekBar)root.findViewById(R.id.seekBar2);
+
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
+
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+                //Toast.makeText(Tab2.this, "Seekbar vale "+i, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+                //Toast.makeText(Tab2.this, "Seekbar touch started", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                //Toast.makeText(Tab2.this, "Seekbar touch stopped", Toast.LENGTH_SHORT).show();
+            }
+        });
+        return root;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

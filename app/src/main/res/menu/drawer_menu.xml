@@ -33,7 +33,8 @@
         <menu>
             <item
                 android:id="@+id/night_mode"
-                android:title="Night Mode" />
+                android:title="Night Mode"
+                android:actionLayout="@layout/switch_layout"/>
             <item
                 android:id="@+id/settings"
                 android:title="Settings" />

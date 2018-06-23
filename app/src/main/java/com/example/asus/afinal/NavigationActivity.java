@@ -1,6 +1,7 @@
 package com.example.asus.afinal;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -18,6 +19,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.Spinner;
 
@@ -45,6 +47,7 @@ public class NavigationActivity extends AppCompatActivity implements NavigationV
 
     private DrawerLayout drawer ;
     Spinner spinner;
+    Button b1;
     @SuppressLint("WrongConstant")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,32 +62,21 @@ public class NavigationActivity extends AppCompatActivity implements NavigationV
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
 
-//        final List<String> list = new ArrayList<String>();
-//        list.add("Select Exam");
-//        list.add("JEE Main");
-//        list.add("JEE Advanced");
-//        list.add("NEET");
-//
-//        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,list);
-//        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//        spinner.setAdapter(arrayAdapter);
-//        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-//            @Override
-//            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-//                spinner.setSelection(i);
-//            }
-//
-//            @Override
-//            public void onNothingSelected(AdapterView<?> parent) {
-//
-//            }
-//        });
-
         FrameLayout fragment_container = (FrameLayout) findViewById(R.id.fragment_container);
         fragment_container.setVisibility(View.VISIBLE);
         drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        View header = navigationView.getHeaderView(0);
+        b1 = (Button) header.findViewById(R.id.button);
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(NavigationActivity.this,SignUpActivity.class);
+                startActivity(intent);
+            }
+        });
 
         BottomNavigationView navigation =  findViewById(R.id.bottom_navigation);
         BottomNavigationViewHelper.removeShiftMode(navigation);
@@ -127,7 +119,8 @@ public class NavigationActivity extends AppCompatActivity implements NavigationV
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AllIndiaTestFragment()).commit();
                 break;
             case R.id.my_bookmarks:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MyBookmarksFragment()).commit();
+                Intent i = new Intent(NavigationActivity.this,Bookmark.class);
+                startActivity(i);
                 break;
             case R.id.recently_viewed:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new RecentlyViewedFragment()).commit();
@@ -164,7 +157,8 @@ public class NavigationActivity extends AppCompatActivity implements NavigationV
                 break;
 
             case R.id.navigation_Profile:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ProfileFragment()).commit();
+                Intent i1 = new Intent(NavigationActivity.this,ProfileActivity.class);
+                startActivity(i1);
                 break;
 
         }

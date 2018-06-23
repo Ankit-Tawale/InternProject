@@ -1,14 +1,22 @@
 package com.example.asus.afinal;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.transition.TransitionManager;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
+
+import java.util.ArrayList;
+
+import static android.support.v7.widget.LinearLayoutManager.*;
 
 
 /**
@@ -25,6 +33,9 @@ public class Tab1 extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
     View root;
+    private ArrayList<String> mName = new ArrayList<>();
+    private ArrayList<String> mTest = new ArrayList<>();
+    private ArrayList<String> mImageUrls = new ArrayList<>();
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -34,7 +45,7 @@ public class Tab1 extends Fragment {
 
     RelativeLayout r1,r2;
     ImageButton btn,btn2;
-
+    RelativeLayout jb,Ca;
     public Tab1() {
         // Required empty public constructor
     }
@@ -75,12 +86,17 @@ public class Tab1 extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         root = inflater.inflate(R.layout.fragment_tab1, container, false);
-
         r1 = (RelativeLayout) root.findViewById(R.id.id1);
         r2 = (RelativeLayout) root.findViewById(R.id.id2);
         btn = (ImageButton) root.findViewById(R.id.btn1);
         btn2 = (ImageButton) root.findViewById(R.id.btn2);
-        btn2.setVisibility(View.GONE);
+
+        jb = (RelativeLayout) root.findViewById(R.id.rll1);
+
+        Ca = (RelativeLayout) root.findViewById(R.id.rll3);
+        btn.setVisibility(View.INVISIBLE);
+        r2.setVisibility(View.INVISIBLE);
+
         //  r2.setVisibility(View.GONE);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,11 +109,63 @@ public class Tab1 extends Fragment {
             @Override
             public void onClick(View v) {
                 r2.setVisibility(View.VISIBLE);
+                btn.setVisibility(View.VISIBLE);
                 btn2.setVisibility(View.GONE);
             }
 
         });
+
+        RelativeLayout jb =(RelativeLayout) root.findViewById(R.id.rll1);
+        jb.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(getContext(),Jobs.class);
+                startActivity(intent);
+            }
+        });
+
+        RelativeLayout Ca =(RelativeLayout) root.findViewById(R.id.rll3);
+        Ca.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(getContext(),CurrentAffairs.class);
+                startActivity(intent);
+            }
+        });
+
+        getData();
+        
         return root;
+    }
+
+    private void getData() {
+
+        mImageUrls.add(String.valueOf(R.id.image));
+        mName.add("IAS Prelims 2018-Free...");
+        mTest.add("Go to my Test");
+
+        mImageUrls.add(String.valueOf(R.id.image));
+        mName.add("IAS Prelims 2018-Free...");
+        mTest.add("Go to my Test");
+
+        mImageUrls.add(String.valueOf(R.id.image));
+        mName.add("IAS Prelims 2018-Free...");
+        mTest.add("Go to my Test");
+
+        mImageUrls.add(String.valueOf(R.id.image));
+        mName.add("IAS Prelims 2018-Free...");
+        mTest.add("Go to my Test");
+
+        initRecycler();
+    }
+
+    private void initRecycler() {
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(), HORIZONTAL,false);
+        RecyclerView recyclerView = root.findViewById(R.id.recyclerview);
+        recyclerView.setLayoutManager(layoutManager);
+        RecyclerAdapter adapter = new RecyclerAdapter(mName,mImageUrls,mTest,getContext());
+        recyclerView.setAdapter(adapter);
+
     }
 
     // TODO: Rename method, update argument and hook method into UI event
